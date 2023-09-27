@@ -1,0 +1,14 @@
+.nav-settings{
+    margin: 5px;
+    padding: 5px;
+    height: min(50px, 20vh);
+    border-bottom: solid #89605B 2px;
+    text-align: center;
+    background-color: #5C3D2E;
+}
+
+.title-settings{
+    font-size: clamp(20px, min(20vw, 20vh), min(45px, 18vh));
+    color: #B85C38;
+    text-shadow: 1px 1px 2px #192015;
+}

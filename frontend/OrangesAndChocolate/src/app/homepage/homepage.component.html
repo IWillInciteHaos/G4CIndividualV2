@@ -1,0 +1,15 @@
+<div >
+    <div class="container" >
+        <div class="card" *ngFor="let rec of recipes">
+          <h1 class="card__name">{{rec.Name}}</h1>
+          <h2 *ngFor="let ing of rec.Ingredients">
+            {{ing}}
+          </h2>
+          <h4>{{rec.Directions}}</h4>
+          <p>{{rec.CreatorName}}</p>
+          
+          <button class="btn draw-border">See more</button>
+      
+        </div>
+    </div>  
+</div>
