@@ -1,0 +1,4 @@
+.default{
+    display: block;
+    width: clamp(50px, min(25vw, 25vh));
+}

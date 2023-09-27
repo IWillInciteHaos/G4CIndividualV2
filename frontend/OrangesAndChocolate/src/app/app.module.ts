@@ -9,11 +9,13 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full'},
   { path: 'homepage', component: HomepageComponent, pathMatch: 'full' },
   { path: 'recipe', component: RecipesComponent, pathMatch: 'full'},
+  { path: 'new-recipe', component: CreateRecipeComponent, pathMatch: 'full'},
   { path: 'login-register', component: LoginRegisterComponent, pathMatch: 'full'}
 ]
 
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     LoginRegisterComponent,
     RecipesComponent,
     HomepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreateRecipeComponent
   ],
   imports: [
     BrowserModule,

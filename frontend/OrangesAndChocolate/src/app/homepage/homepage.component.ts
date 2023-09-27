@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../Models/Recipe';
 import { RecipeService } from '../recipe.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -10,7 +11,7 @@ import { RecipeService } from '../recipe.service';
 export class HomepageComponent {
   recipes: Recipe[] = [];
 
-  constructor(private recipeService: RecipeService)
+  constructor(private recipeService: RecipeService, private router:Router)
     //this.recipes.push(new Recipe("recipe1", "user1", ["salt", "peper"], "make stuff"))
     //this.recipes.push(new Recipe("recipe2", "user1", ["salt", "peper"], "make stuff"))  
     //this.recipes = []  
@@ -22,5 +23,7 @@ export class HomepageComponent {
       this.recipes = responseData;
     })
   }
-  
+  addRecipe(){
+    this.router.navigate(['/new-recipe'])
+  }
 }
