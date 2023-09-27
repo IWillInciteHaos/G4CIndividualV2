@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using OrangesAndChocolate.DTO;
+using OrangesAndChocolate.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -13,12 +14,12 @@ namespace OrangesAndChocolate.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<SiteUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
 
 
-        public AuthController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration)
+        public AuthController(UserManager<SiteUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _roleManager = roleManager;
@@ -55,7 +56,7 @@ namespace OrangesAndChocolate.Controllers
             {
                 return BadRequest("Username already exists.");
             }
-            var tempUser = new IdentityUser()
+            var tempUser = new SiteUser()
             {
                 Email = rDTO.Email,
                 UserName = rDTO.Username,
@@ -125,6 +126,5 @@ namespace OrangesAndChocolate.Controllers
 
             return token;
         }
-
     }
 }

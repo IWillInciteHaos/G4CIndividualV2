@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using OrangesAndChocolate;
+using OrangesAndChocolate.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,7 @@ builder.Services.AddDbContext<OACDBContext>(options =>
     options.UseSqlServer(connectionString);
 });
 //
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<SiteUser, IdentityRole>()
     .AddEntityFrameworkStores<OACDBContext>()
     .AddDefaultTokenProviders();
 

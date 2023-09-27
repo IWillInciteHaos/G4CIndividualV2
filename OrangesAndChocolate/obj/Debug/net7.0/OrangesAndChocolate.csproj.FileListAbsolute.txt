@@ -164,3 +164,4 @@ D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\obj\Debug\net7.0\refint\Ora
 D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\obj\Debug\net7.0\OrangesAndChocolate.pdb
 D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\obj\Debug\net7.0\OrangesAndChocolate.genruntimeconfig.cache
 D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\obj\Debug\net7.0\ref\OrangesAndChocolate.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\AutoMapper.dll
