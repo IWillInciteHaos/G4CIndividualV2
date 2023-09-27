@@ -7,7 +7,7 @@ namespace OrangesAndChocolateB.DTOs
     public class RecipeCreateDTO
     {
         [Required]
-        public string CratorUsername { get; set; }
+        public string CreatorUsername { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]

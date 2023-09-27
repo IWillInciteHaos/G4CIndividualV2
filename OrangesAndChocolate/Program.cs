@@ -4,6 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using OrangesAndChocolate;
 using OrangesAndChocolate.Models;
+using OrangesAndChocolateB;
+using OrangesAndChocolateB.Repositories.Classes;
+using OrangesAndChocolateB.Repositories.Interfaces;
+using OrangesAndChocolateB.Services.Classes;
+using OrangesAndChocolateB.Services.Interfaces;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -55,6 +60,21 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AnotherPolicy",
+        policy =>
+        {
+            policy.WithOrigins("https://localhost")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+        });
+});
+
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+
+builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
+builder.Services.AddScoped<IRecipeService, RecipeService>();
 
 var app = builder.Build();
 
@@ -66,6 +86,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AnotherPolicy");
 
 app.UseAuthorization(); 
 app.UseAuthorization();

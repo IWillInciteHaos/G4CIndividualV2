@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OrangesAndChocolate.DTO;
+using OrangesAndChocolate.Models;
 using OrangesAndChocolateB.DTOs;
 using OrangesAndChocolateB.Services.Interfaces;
 using System.Data;
+using System.Web.Http.Cors;
 
 namespace OrangesAndChocolateB.Controllers
 {
+    [EnableCors("*","*","*")]
     [ApiController]
     [Route("api/[controller]")]
     public class RecipeController : Controller
@@ -18,7 +21,7 @@ namespace OrangesAndChocolateB.Controllers
             _recipeService = recipeService;
         }
 
-        [Authorize(Roles = StaticUserRoles.User)]
+        //[Authorize(Roles = StaticUserRoles.User)]
         [HttpPost("create_recipe")]
         public async Task<ActionResult<RecipeCreateDTO>> CreateRecipe(RecipeCreateDTO rDTO)
         {
@@ -43,7 +46,7 @@ namespace OrangesAndChocolateB.Controllers
             return retVal is null ? BadRequest("No such recipe.") : Ok(retVal);
         }
 
-        [Authorize(Roles = StaticUserRoles.User)]
+        //[Authorize(Roles = StaticUserRoles.User)]
         [HttpDelete("delete_recipe")]
         public async Task<ActionResult<RecipeCreateDTO>> DeleteRecipe(string recipeName)
         {

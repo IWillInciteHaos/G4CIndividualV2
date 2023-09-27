@@ -26,7 +26,7 @@ namespace OrangesAndChocolateB.Services.Classes
 
 
             var tempRec = _mapper.Map<Recipe>(rDTO);
-            tempRec.CreatorUsername = rDTO.CratorUsername;
+            tempRec.CreatorUsername = rDTO.CreatorUsername;
             tempRec.isActive = true;
 
             foreach (var ingr in tempRec.Ingredients)

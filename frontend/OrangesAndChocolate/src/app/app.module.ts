@@ -8,11 +8,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full'},
   { path: 'homepage', component: HomepageComponent, pathMatch: 'full' },
-  { path: 'recipe', component: RecipesComponent, pathMatch: 'full'}
+  { path: 'recipe', component: RecipesComponent, pathMatch: 'full'},
+  { path: 'login-register', component: LoginRegisterComponent, pathMatch: 'full'}
 ]
 
 @NgModule({
@@ -26,6 +28,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

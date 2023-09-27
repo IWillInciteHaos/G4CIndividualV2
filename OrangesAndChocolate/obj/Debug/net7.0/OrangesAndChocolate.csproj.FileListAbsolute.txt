@@ -165,3 +165,10 @@ D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\obj\Debug\net7.0\OrangesAnd
 D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\obj\Debug\net7.0\OrangesAndChocolate.genruntimeconfig.cache
 D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\obj\Debug\net7.0\ref\OrangesAndChocolate.dll
 D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\AutoMapper.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\System.Web.Cors.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\System.Web.Http.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\System.Web.Http.Cors.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\G4C\OrangesAndChocolate\G4CV2\OrangesAndChocolate\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
