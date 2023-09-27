@@ -1,18 +1,21 @@
-<p>recipes</p>
-<div>
-    <div class="container" >
-      
-        <div class="card">
-          <h1 class="card__name">Name: {{name}}</h1>
-          <!--h2 *ngFor="let ing of rec.Ingredients">
-            {{ing}}
-          </h2>
-          <h4>{{rec.Directions}}</h4>
-          <p>{{rec.CreatorName}}</p-->
-          
-          <button class="btn draw-border">See more</button>
-      
-        </div>
-    </div>  
-    <button (click)="showMe()">show me</button>
-</div>
+<div class="container">
+
+  <div class="card" *ngFor="let rec of recipes; index as i">
+    <span class="material-symbols-outlined right cursor">
+      remove
+    </span>
+    <div (click)="takeMeToTheRecipe(i)">
+      <h1>Recipe name</h1>
+      <h2>ingredient list</h2>
+      <h3>Directions</h3>     
+    </div>
+    <div class="user">
+      <span class="material-symbols-outlined cursor">
+        favorite
+      </span>
+      <p>by: user</p>       
+    </div>
+    
+  </div>
+    
+</div>  

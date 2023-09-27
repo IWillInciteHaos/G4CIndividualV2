@@ -1,9 +1,9 @@
 <nav class="nav-settings">
-    <span class="title-settings">
+    <span class="title-settings" (click)="goToHomepage()">
         {{app_name}}
     </span>    
 
-    <span style="float: right; color: white">
-        <a routerLink="/login-register">account</a>
-    </span>
+    <button class="material-symbols-outlined fancy" (click)="goToLogin()">
+        account_circle
+    </button>
 </nav>

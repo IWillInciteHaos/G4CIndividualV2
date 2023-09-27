@@ -11,4 +11,21 @@
     font-size: clamp(20px, min(20vw, 20vh), min(45px, 18vh));
     color: #B85C38;
     text-shadow: 1px 1px 2px #192015;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.fancy{
+    border: none;
+    background: none;
+    color: #FFF0DF;
+    float: right;
+    cursor: pointer;
 }

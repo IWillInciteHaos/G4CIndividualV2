@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   app_name: string =  "Oranges and Chocolate"
+
+  constructor(private router: Router){}
+
+
+  goToLogin(){
+    this.router.navigate(['/login-register']);
+  }
+
+  goToHomepage(){
+    this.router.navigate(['/homepage'])
+  }
 }

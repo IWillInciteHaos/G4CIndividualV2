@@ -1,6 +1,6 @@
 body{
 	margin:0;
-	color:#6a6f8c;
+	color:#C5ABA8;
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
@@ -15,15 +15,16 @@ a{color:inherit;text-decoration:none}
 	max-width:525px;
 	min-height:670px;
 	position:relative;
-	background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
-	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	background:url(https://052d1f16615cd6169700.b-cdn.net/wp-content/uploads/2020/10/pexels-ksenia-chernaya-3952054-scaled.jpg.webp) no-repeat center;
+	background-size:     cover;
+	box-shadow:0 12px 15px 0 rgba(119, 100, 97,.24),0 17px 50px 0 rgba(119, 100, 97,.19);
 }
 .login-html{
 	width:100%;
 	height:100%;
 	position:absolute;
 	padding:90px 70px 50px 70px;
-	background:rgba(40,57,101,.9);
+	background:rgba(197, 171, 168,.9);
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -56,8 +57,8 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
-	color:#fff;
-	border-color:#1161ee;
+	color:#362624;
+	border-color:#FFF0DF;
 }
 .login-form{
 	min-height:345px;
@@ -72,7 +73,7 @@ a{color:inherit;text-decoration:none}
 .login-form .group .input,
 .login-form .group .button{
 	width:100%;
-	color:#fff;
+	color:#FFF0DF;
 	display:block;
 }
 .login-form .group .input,
@@ -80,18 +81,18 @@ a{color:inherit;text-decoration:none}
 	border:none;
 	padding:15px 20px;
 	border-radius:25px;
-	background:rgba(255,255,255,.1);
+	background:rgba(255, 240, 223,.1);
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
 	-webkit-text-security:circle;
 }
 .login-form .group .label{
-	color:#aaa;
+	color:#F1D4A7;
 	font-size:12px;
 }
 .login-form .group .button{
-	background:#1161ee;
+	background:#362624;
 }
 .login-form .group label .icon{
 	width:15px;
@@ -99,14 +100,14 @@ a{color:inherit;text-decoration:none}
 	border-radius:2px;
 	position:relative;
 	display:inline-block;
-	background:rgba(255,255,255,.1);
+	background:rgba(255, 240, 223,.1);
 }
 .login-form .group label .icon:before,
 .login-form .group label .icon:after{
 	content:'';
 	width:10px;
 	height:2px;
-	background:#fff;
+	background:#F7E7CE;
 	position:absolute;
 	transition:all .2s ease-in-out 0s;
 }
@@ -122,10 +123,10 @@ a{color:inherit;text-decoration:none}
 	transform:scale(0) rotate(0);
 }
 .login-form .group .check:checked + label{
-	color:#fff;
+	color:#F7E7CE;
 }
 .login-form .group .check:checked + label .icon{
-	background:#1161ee;
+	background:#362624;
 }
 .login-form .group .check:checked + label .icon:before{
 	transform:scale(1) rotate(45deg);
@@ -143,8 +144,13 @@ a{color:inherit;text-decoration:none}
 .hr{
 	height:2px;
 	margin:60px 0 50px 0;
-	background:rgba(255,255,255,.2);
+	background:rgba(255, 240, 223,.2);
 }
 .foot-lnk{
 	text-align:center;
+}
+
+.input{
+	border: none;
+	outline: none;
 }

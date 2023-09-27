@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 import { Recipe } from '../Models/Recipe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipes',
@@ -8,26 +9,21 @@ import { Recipe } from '../Models/Recipe';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent {
-  @Input() name: string = '';
-  @Input() creatorName: string = '';
-  @Input() ingredients: string[] = []
-  @Input() directions: string = '';
+  recipes: Recipe[] = []
   
   
   constructor(private recipeService: RecipeService){}
   
   ngOnInit() {
-    
-    /*this.recipeService.createRecipe(recParam).subscribe({
-      next: (data) =>{
-        console.log(data);
-        this.recipes.push(data);
-      }
-    })*/
+    this.recipeService.fetchRecipes().subscribe((responseData : Recipe[]) =>{
+      console.log(responseData);
+      this.recipes = responseData;
+    })
   }
 
-  showMe(){    
-    //console.log(this.recipes);
+  takeMeToTheRecipe(index: number){   
+    //router.Navigate("/recipe/:id")
+    console.log(index);
   }
     
 }

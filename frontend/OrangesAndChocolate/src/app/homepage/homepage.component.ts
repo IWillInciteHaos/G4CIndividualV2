@@ -8,16 +8,19 @@ import { RecipeService } from '../recipe.service';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  recipes: Recipe[] = []
+  recipes: Recipe[] = [];
 
-  constructor(private recipeService: RecipeService){
+  constructor(private recipeService: RecipeService)
     //this.recipes.push(new Recipe("recipe1", "user1", ["salt", "peper"], "make stuff"))
-    //this.recipes.push(new Recipe("recipe2", "user1", ["salt", "peper"], "make stuff"))
-    
-    this.recipeService.fetchRecipes().subscribe((responseData : Recipe[])=>{
-      this.recipes = responseData;
-      console.log(this.recipes);
-    })
+    //this.recipes.push(new Recipe("recipe2", "user1", ["salt", "peper"], "make stuff"))  
+    //this.recipes = []  
+  {}
   
+  ngOnInit(){
+    this.recipeService.fetchRecipes().subscribe((responseData : Recipe[]) =>{
+      console.log(responseData);
+      this.recipes = responseData;
+    })
   }
+  
 }
