@@ -1,13 +1,13 @@
 export class Recipe{
-    Name: string;
-    CreatorName: string;
-    Ingredients: string[]
-    Directions: string;
+    name: string;
+    creatorUserame: string;
+    ingredients: string[]
+    directions: string;
 
-    constructor(name: string ="default r name", cn : string = "default c name", ingr : string[], dir: string = "some directions"){
-        this.Name = name;
-        this.CreatorName = cn;
-        this.Ingredients = ingr;
-        this.Directions = dir;
+    constructor(Name: string, CreatorName : string, Ingredients : string[], dir: string){
+        this.name = Name;
+        this.creatorUserame = CreatorName;
+        this.ingredients = Ingredients;
+        this.directions = dir;
     }
 }

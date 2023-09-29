@@ -64,6 +64,10 @@
             },
             "development": {
               "browserTarget": "OrangesAndChocolate:build:development"
+            },
+            "options": {
+              "browserTarget": "OrangesAndChocolate:build",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

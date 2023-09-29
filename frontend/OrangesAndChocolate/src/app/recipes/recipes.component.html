@@ -1,13 +1,13 @@
-<div class="container">
+<!--div class="container hide-me">
 
-  <div class="card" *ngFor="let rec of recipes; index as i">
+  <div class="card hide-me" *ngFor="let rec of recipes; index as i">
     <span class="material-symbols-outlined right cursor">
       remove
     </span>
-    <div (click)="takeMeToTheRecipe(i)">
-      <h1>Recipe name</h1>
+    <div (click)="takeMeToTheRecipe(i)" >
+      <h1>{{rec.name}}</h1>
       <h2>ingredient list</h2>
-      <h3>Directions</h3>     
+      <h3 class="hide-me">{{rec.directions}}</h3>     
     </div>
     <div class="user">
       <span class="material-symbols-outlined cursor">
@@ -18,4 +18,26 @@
     
   </div>
     
-</div>  
+</div-->  
+
+<div class="container">
+  <div class="parent card" *ngFor="let rec of recipes; index as i">
+    <div class="div1" (click)="takeMeToTheRecipe(i)"> 
+      <span class="material-symbols-outlined right cursor">
+        remove
+      </span>
+      <h1>{{rec.name}}</h1>
+      
+    </div>
+    <div class="div2 hide-me"> 
+      <h3>{{rec.directions}}</h3>
+    </div>
+    <div class="div3">
+      <span class="material-symbols-outlined cursor">
+        favorite
+      </span>
+    </div>
+    <div class="div4 user">
+      <p>by: user</p>      
+    </div> 
+</div>

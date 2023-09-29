@@ -8,11 +8,12 @@ import { Observable, catchError, map } from 'rxjs';
 })
 export class RecipeService {
 
+  url = 'http://localhost:5011/api/Recipe';
   
   constructor(private http: HttpClient) { }
 
   fetchRecipes(): Observable<Recipe[]>{
-    return this.http.get<Recipe[]>('https://localhost:7234/api/Recipe/get_recipes');
+    return this.http.get<Recipe[]>(this.url);
   }
   /*
   createRecipe(recipe: Recipe) : Observable<Recipe> {

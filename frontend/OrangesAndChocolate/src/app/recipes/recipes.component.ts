@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 import { Recipe } from '../Models/Recipe';
 import { Router } from '@angular/router';
+import { endWith } from 'rxjs';
 
 @Component({
   selector: 'app-recipes',
@@ -16,8 +17,10 @@ export class RecipesComponent {
   
   ngOnInit() {
     this.recipeService.fetchRecipes().subscribe((responseData : Recipe[]) =>{
-      console.log(responseData);
-      this.recipes = responseData;
+      //console.log(responseData);
+      //console.log(responseData.at(1) as Recipe);
+      this.recipes = responseData
+      console.log(this.recipes[0].ingredients)
     })
   }
 

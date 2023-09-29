@@ -21,8 +21,9 @@ namespace OrangesAndChocolateB.Controllers
             _recipeService = recipeService;
         }
 
+        //("create_recipe")
         //[Authorize(Roles = StaticUserRoles.User)]
-        [HttpPost("create_recipe")]
+        [HttpPost]
         public async Task<ActionResult<RecipeCreateDTO>> CreateRecipe(RecipeCreateDTO rDTO)
         {
             var retVal = await _recipeService.CreateRecipe(rDTO);
@@ -30,7 +31,8 @@ namespace OrangesAndChocolateB.Controllers
             return retVal is null ? BadRequest("No such user.") : Ok(retVal);
         }
 
-        [HttpGet("get_recipes")]
+        //("get_recipes")
+        [HttpGet]
         public async Task<ActionResult<RecipeCreateDTO>> GetAllRecipes([FromQuery] int amount)
         {
             var retVal = await _recipeService.GetAllRecipes(amount);
@@ -38,6 +40,7 @@ namespace OrangesAndChocolateB.Controllers
             return retVal is null ? BadRequest("No recipes.") : Ok(retVal);
         }
 
+        //
         [HttpGet("get_one_by_name")]
         public async Task<ActionResult<RecipeCreateDTO>> GetRecipeByName([FromQuery] string name)
         {
@@ -46,8 +49,9 @@ namespace OrangesAndChocolateB.Controllers
             return retVal is null ? BadRequest("No such recipe.") : Ok(retVal);
         }
 
+        //("delete_recipe")
         //[Authorize(Roles = StaticUserRoles.User)]
-        [HttpDelete("delete_recipe")]
+        [HttpDelete]
         public async Task<ActionResult<RecipeCreateDTO>> DeleteRecipe(string recipeName)
         {
             var retVal = await _recipeService.DeleteRecipe(recipeName);
@@ -55,6 +59,7 @@ namespace OrangesAndChocolateB.Controllers
             return retVal is null ? BadRequest("No such recipe.") : Ok(retVal);
         }
 
+        //
         [HttpGet("filter_by_ingredient")]
         public async Task<ActionResult<RecipeCreateDTO>> FilterByIngredient([FromQuery]string ingredient)
         {
